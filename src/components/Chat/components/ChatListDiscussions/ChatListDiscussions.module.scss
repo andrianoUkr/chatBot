@@ -1,0 +1,19 @@
+.defaultWrapper{
+  padding: 20px;
+}
+
+
+.listItemWrapper:global(.ant-list-item) {
+  cursor: pointer;
+  padding: 10px 20px;
+
+  &:global(.active) {
+    background-color: #008dff;
+  }
+
+  .itemMetaWrapper :global(.ant-list-item-meta-description) {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}

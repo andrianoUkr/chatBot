@@ -1,0 +1,12 @@
+.itemWrapper:global(.ant-list-item) {
+  display: flex;
+  align-items: flex-start;
+
+  .itemMetaWrapper :global(.ant-list-item-meta-description) {
+    padding: 5px;
+    white-space: pre-wrap;
+    background-color: #fff;
+    margin: 5px;
+    border-radius: 5px;
+  }
+}

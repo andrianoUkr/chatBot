@@ -1,0 +1,25 @@
+version: '2'
+services:
+    chatbot:
+        image: node:16.16.0
+        # link a local folder to a container folder
+        volumes:
+            - ./:/home/node/front-project
+        # use port for current project
+        ports:
+            - 3001:3000
+        container_name: chatbot
+        # working directory path in the container
+        working_dir: /home/node/front-project
+        # use command to run
+        command:
+            - /bin/bash
+            - -c
+            - |
+                echo YARN INSTALL
+                yarn
+                echo YARN START
+                yarn start
+        # use command in console bash
+        # docker-compose -f chatbot.yml up -d
+        
